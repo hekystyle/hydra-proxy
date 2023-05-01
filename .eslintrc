@@ -1,0 +1,28 @@
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:n/recommended",
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "airbnb-typescript/base",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "project": ["./tsconfig.json"],
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  },
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "import/prefer-default-export": "off",
+    "node/no-missing-import": "off",
+    "@typescript-eslint/return-await": ["error", "always"],
+    "@typescript-eslint/member-ordering": ["error"],
+    "@typescript-eslint/no-empty-function": ["error", { "allow": ["private-constructors"] }],
+    "@typescript-eslint/array-type": ["error", { "default": "array-simple", "readonly": "array-simple" }]
+  }
+}
